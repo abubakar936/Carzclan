@@ -6,7 +6,7 @@ const user = require('./routes/user');
 const app = express();
 require("./Database/connection");
 //------Static file middleware-----//
-
+var PORT=process.env.PORT || 4000;
 app.use(express.static(__dirname));
 
 //------Enable CORS-----//
@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
  res.send("hi from Carzclan....");
 });
 
-app.listen(process.env.PORT || 4000,()=>{
+app.listen(PORT,()=>{
   console.log("listening on port 4000")
  // console.log(process.env.NODE_ENV)  
 });
