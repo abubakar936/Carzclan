@@ -34,6 +34,7 @@ const userSchema = new mongoose.Schema
          minlength: 6,
          maxlength: 1040
       },
+      //dfbjh
     
    })
 console.log(process.env.JWTPRIVATEKEY)
