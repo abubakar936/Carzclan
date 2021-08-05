@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
  res.send("hi from Carzclan....");
 });
 
-app.listen(4000,()=>{
+app.listen(process.env.PORT || 4000,()=>{
   console.log("listening on port 4000")
  // console.log(process.env.NODE_ENV)  
 });
