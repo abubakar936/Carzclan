@@ -1,7 +1,7 @@
 const express= require("express");
 const cors = require('cors');
-const city = require('./Routes/city');
-const area = require('./Routes/area');
+const city = require('./routes/city');
+const area = require('./routes/area');
 const user = require('./routes/user');
 const app = express();
 require("./Database/connection");
