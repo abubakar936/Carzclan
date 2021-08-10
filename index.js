@@ -40,7 +40,7 @@ mongoose.connect("mongodb+srv://Abubakar:DfohKvcRnMz7UOjm@cluster0.z1hqb.mongodb
   .catch((err) => console.log(err));
 
 app.get('/', (req, res) => {
- res.send("hi from Carzclan....");
+ res.send("hello from Carzclan....");
 });
 
 app.listen(PORT,()=>{
