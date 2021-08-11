@@ -17,7 +17,6 @@ const userSchema = new mongoose.Schema
       contact:
         {
             type: String,
-            required: true,
             maxlength: 13,
         },
       email:

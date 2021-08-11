@@ -62,12 +62,7 @@ router.post('/signup', async (req, res) => {
                 message: error,
             })
         }
-        else {
-            return res.json({
-                success: true, 
-                message: "kindly Check your email for confirmation code",
-            })
-        }
+      
     });
         const newUser = new User
             ({
