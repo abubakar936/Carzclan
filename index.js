@@ -3,13 +3,13 @@ const cors = require('cors');
 const city = require('./routes/city');
 const area = require('./routes/area');
 const user = require('./routes/user');
+const car_manufactuer = require('./routes/car_manufactuer');
 const app = express();
 const dotenv=require('dotenv');
 dotenv.config();
 require("./Database/connection");
 //------Static file middleware-----//
- var PORT=process.env.PORT || 4000;
-console.log(process.env.PORT) 
+
 console.log(process.env.ADMIN_PASSWORD) 
 app.use(express.static(__dirname));
 
@@ -26,6 +26,7 @@ app.use(express.json());
 
 app.use('/api/city', city)
 app.use('/api/user', user)
+app.use('/api/manufactuer', car_manufactuer)
 // app.use('/api/area', area);
 
 //------Database connection-----//
@@ -47,7 +48,7 @@ app.get('/', (req, res) => {
  res.send("helloo from Carzclan....");
 });
 
-app.listen(process.env.PORT || 8081,()=>{
+app.listen(process.env.PORT || 4000,()=>{
   console.log("listening on port 4000")
  // console.log(process.env.NODE_ENV)  
 });
