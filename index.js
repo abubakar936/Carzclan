@@ -8,8 +8,8 @@ const dotenv=require('dotenv');
 dotenv.config();
 require("./Database/connection");
 //------Static file middleware-----//
-//  var PORT=process.env.PORT || 4000;
-// // console.log(process.env.PORT) 
+ var PORT=process.env.PORT || 4000;
+console.log(process.env.PORT) 
 console.log(process.env.ADMIN_PASSWORD) 
 app.use(express.static(__dirname));
 
@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
  res.send("helloo from Carzclan....");
 });
 
-app.listen(4000,()=>{
+app.listen(process.env.PORT || 8081,()=>{
   console.log("listening on port 4000")
  // console.log(process.env.NODE_ENV)  
 });
