@@ -284,6 +284,7 @@ router.post('/login', async (req, res) => {
                     
                 })
         } 
+        
 
         if (getUser) {
             return res.json
@@ -302,5 +303,12 @@ router.post('/login', async (req, res) => {
     }
 })
 
-
+function logInValidation(user) {
+    const userSchema = Joi.object
+        ({
+            email: Joi.string().email().required().min(3).max(120),
+            password: Joi.string().required(),
+        })
+    return userSchema.validate(user)
+}
 module.exports = router;

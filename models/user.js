@@ -33,6 +33,14 @@ const userSchema = new mongoose.Schema
          minlength: 6,
          maxlength: 1040
       },
+      email_varification:
+      {
+         type: Boolean,
+         default: false
+      },
+      confirmation_code:{
+         type: String,
+      },
       //dfbjh
     
    })
